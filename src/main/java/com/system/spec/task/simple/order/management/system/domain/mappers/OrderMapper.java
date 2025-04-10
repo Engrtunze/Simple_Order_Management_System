@@ -1,9 +1,10 @@
 package com.system.spec.task.simple.order.management.system.domain.mappers;
 
-import com.system.spec.task.simple.order.management.system.config.MapperConfig;
+
 import com.system.spec.task.simple.order.management.system.domain.dto.OrderResponseDto;
 import com.system.spec.task.simple.order.management.system.domain.models.OrderEntity;
 import org.mapstruct.Mapper;
+import org.mapstruct.MapperConfig;
 import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring" ,config = MapperConfig.class, uses = {OrderItemMapper.class,})

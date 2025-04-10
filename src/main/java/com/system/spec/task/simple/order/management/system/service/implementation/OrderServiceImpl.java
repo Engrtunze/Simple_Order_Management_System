@@ -2,7 +2,6 @@ package com.system.spec.task.simple.order.management.system.service.implementati
 
 import com.system.spec.task.simple.order.management.system.domain.dto.CreateOrderRequest;
 import com.system.spec.task.simple.order.management.system.domain.dto.OrderItemRequestDto;
-import com.system.spec.task.simple.order.management.system.domain.dto.OrderItemResponseDto;
 import com.system.spec.task.simple.order.management.system.domain.dto.OrderResponseDto;
 import com.system.spec.task.simple.order.management.system.domain.exception.ValidationException;
 import com.system.spec.task.simple.order.management.system.domain.mappers.OrderItemMapper;
@@ -11,10 +10,8 @@ import com.system.spec.task.simple.order.management.system.domain.mappers.Produc
 import com.system.spec.task.simple.order.management.system.domain.mappers.UserMapper;
 import com.system.spec.task.simple.order.management.system.domain.models.OrderEntity;
 import com.system.spec.task.simple.order.management.system.domain.models.OrderItemEntity;
-import com.system.spec.task.simple.order.management.system.domain.repository.OrderItemRepository;
+
 import com.system.spec.task.simple.order.management.system.domain.repository.OrderRepository;
-import com.system.spec.task.simple.order.management.system.domain.repository.ProductRepository;
-import com.system.spec.task.simple.order.management.system.domain.repository.UserRepository;
 import com.system.spec.task.simple.order.management.system.service.OrderService;
 import com.system.spec.task.simple.order.management.system.service.ProductService;
 import com.system.spec.task.simple.order.management.system.service.UserService;

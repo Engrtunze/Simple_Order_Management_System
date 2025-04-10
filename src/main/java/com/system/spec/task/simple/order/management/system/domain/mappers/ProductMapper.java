@@ -1,6 +1,5 @@
 package com.system.spec.task.simple.order.management.system.domain.mappers;
 
-import com.system.spec.task.simple.order.management.system.config.MapperConfig;
 import com.system.spec.task.simple.order.management.system.domain.dto.ProductRequestDto;
 import com.system.spec.task.simple.order.management.system.domain.dto.ProductResponseDto;
 import com.system.spec.task.simple.order.management.system.domain.models.ProductEntity;
