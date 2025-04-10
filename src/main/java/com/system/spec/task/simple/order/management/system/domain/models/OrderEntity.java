@@ -32,6 +32,7 @@ public class OrderEntity  extends  AbstractAuditable {
     @Column(nullable = false)
     private BigDecimal totalAmount;
 
+    @Builder.Default
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderItemEntity> items = new ArrayList<>();
 }

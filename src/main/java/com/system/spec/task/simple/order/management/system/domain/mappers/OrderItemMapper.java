@@ -11,8 +11,8 @@ import org.mapstruct.ReportingPolicy;
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE,
         nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE, componentModel = "spring")
 public interface OrderItemMapper {
-    @Mapping(target = "productId", source = "product.id")
-    @Mapping(target = "productName", source = "product.name")
+    @Mapping(target = "productId", source = "orderItem.id")
+    @Mapping(target = "productName", source = "orderItem.product.name")
     OrderItemResponseDto toDTO(OrderItemEntity orderItem);
 
     @Mapping(target = "order", ignore = true)
@@ -25,7 +25,6 @@ public interface OrderItemMapper {
         }
 
         return OrderItemEntity.builder()
-                .id(dto.getId())
                 .quantity(dto.getQuantity())
                 .price(product.getPrice())
                 .product(product)

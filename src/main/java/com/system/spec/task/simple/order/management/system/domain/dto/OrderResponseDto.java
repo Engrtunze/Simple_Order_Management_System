@@ -16,6 +16,7 @@ import lombok.NoArgsConstructor;
 public class OrderResponseDto {
     private UUID id;
     private UUID userId;
+    private  String name;
     private BigDecimal totalAmount;
     private LocalDateTime createdAt;
     private List<OrderItemResponseDto> items;

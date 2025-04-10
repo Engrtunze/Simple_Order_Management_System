@@ -14,10 +14,10 @@ import org.mapstruct.ReportingPolicy;
 public interface ProductMapper {
 
     // Map FROM ProductResponseDto TO ProductEntity
-    @Mapping(target = "isDeleted", source = "deleted") // Fix boolean field naming
+  //  @Mapping(target = "isDeleted", source = "deleted")
     ProductEntity mapToEntityFromResponse(ProductResponseDto response);
     ProductEntity mapToEntity(ProductRequestDto request);
-    @Mapping(target = "isDeleted", source = "deleted")
+ //   @Mapping(target = "deleted", source = "isDeleted")
     ProductResponseDto mapTtoResponse(ProductEntity product);
 
 

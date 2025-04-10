@@ -7,27 +7,18 @@ import jakarta.persistence.MappedSuperclass;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.Instant;
-import java.util.Map;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.hibernate.annotations.TypeDef;
-import com.vladmihalcea.hibernate.type.json.JsonType;
+
 
 @Data
 @MappedSuperclass
-@SuperBuilder
 @RequiredArgsConstructor
 @AllArgsConstructor
-@TypeDef(
-        typeClass = JsonType.class,
-        name = "json",
-        defaultForType = Map.class
-)
 public abstract class AbstractAuditable  implements Serializable {
     @Id
     @GeneratedValue(generator = "uuid2")
