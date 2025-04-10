@@ -3,6 +3,7 @@ package com.system.spec.task.simple.order.management.system.controllers;
 import com.system.spec.task.simple.order.management.system.domain.dto.ProductRequestDto;
 import com.system.spec.task.simple.order.management.system.domain.dto.ProductResponseDto;
 import com.system.spec.task.simple.order.management.system.service.ProductService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import java.util.List;
 import java.util.UUID;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/products")
 @RequiredArgsConstructor
+@Tag(name = "Product", description = "Product management API")
 public class ProductController {
     private final ProductService productService;
 

@@ -4,6 +4,7 @@ import com.system.spec.task.simple.order.management.system.domain.dto.CreateUser
 import com.system.spec.task.simple.order.management.system.domain.dto.UpdateUserRequest;
 import com.system.spec.task.simple.order.management.system.domain.dto.UserResponseDto;
 import com.system.spec.task.simple.order.management.system.service.UserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import java.util.List;
 import java.util.UUID;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
+@Tag(name = "User", description = "User management API")
 public class UserController {
 
     private final UserService userService;

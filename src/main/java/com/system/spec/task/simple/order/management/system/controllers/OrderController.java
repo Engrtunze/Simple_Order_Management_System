@@ -4,6 +4,7 @@ import com.system.spec.task.simple.order.management.system.domain.dto.CreateOrde
 import com.system.spec.task.simple.order.management.system.domain.dto.OrderItemRequestDto;
 import com.system.spec.task.simple.order.management.system.domain.dto.OrderResponseDto;
 import com.system.spec.task.simple.order.management.system.service.OrderService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import java.util.List;
 import java.util.UUID;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/orders")
 @RequiredArgsConstructor
+@Tag(name = "Order", description = "Order management API")
 public class OrderController {
     private final OrderService orderService;
 
