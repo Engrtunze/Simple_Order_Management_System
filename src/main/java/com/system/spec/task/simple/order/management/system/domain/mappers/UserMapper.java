@@ -5,11 +5,13 @@ import com.system.spec.task.simple.order.management.system.domain.dto.CreateUser
 import com.system.spec.task.simple.order.management.system.domain.dto.UserResponseDto;
 import com.system.spec.task.simple.order.management.system.domain.models.UserEntity;
 import org.mapstruct.Mapper;
-import org.mapstruct.MapperConfig;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
+import org.mapstruct.NullValuePropertyMappingStrategy;
+import org.mapstruct.ReportingPolicy;
 
-@Mapper(componentModel = "spring", config = MapperConfig.class)
+@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE,
+        nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE, componentModel = "spring")
 public interface UserMapper {
     @Mapping(target = "id", source = "id")
     @Mapping(target = "name", source = "name")

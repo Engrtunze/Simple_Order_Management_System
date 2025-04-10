@@ -4,10 +4,12 @@ import com.system.spec.task.simple.order.management.system.domain.dto.OrderItemR
 import com.system.spec.task.simple.order.management.system.domain.models.OrderItemEntity;
 import com.system.spec.task.simple.order.management.system.domain.models.ProductEntity;
 import org.mapstruct.Mapper;
-import org.mapstruct.MapperConfig;
 import org.mapstruct.Mapping;
+import org.mapstruct.NullValuePropertyMappingStrategy;
+import org.mapstruct.ReportingPolicy;
 
-@Mapper(componentModel = "spring", config = MapperConfig.class)
+@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE,
+        nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE, componentModel = "spring")
 public interface OrderItemMapper {
     @Mapping(target = "productId", source = "product.id")
     @Mapping(target = "productName", source = "product.name")
